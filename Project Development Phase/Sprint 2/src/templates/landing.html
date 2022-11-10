@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+   <html>
+   <head>
+       <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plasma Donor</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #e9cffa;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 2030px;
+  height: 550px;
+  background-color: #fff;
+  border-radius: 3.3rem;
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+.inner-box {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+  margin-left: 340px;
+  margin-top: -10px;
+}
+
+.header a {
+  float: left;
+  color: #75519f;
+  text-align: center;
+  padding: 12px;
+  font-size: large; 
+  font-weight: 100rem;
+  line-height: 25px;
+   text-decoration: none;
+  border-radius: 4px;
+}
+
+.header a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size:x-large;
+  color: #f792c1;
+  margin-left: 10px;
+}
+
+.heading h2 {
+  font-size:2rem;
+  font-weight:300;
+  color: rgb(80, 71, 80);
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+.maintext{
+  color:#605481;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.toggle {
+  color: #75519f;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: 0.3s;
+}
+
+.toggle:hover {
+  color: black;
+}
+
+.images{
+margin-left: 100px;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  background-color: #393939;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.0rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #8371fd;
+}
+
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #f8a9da;
+  --color-2: #d8a7fe;
+  --color-3: #bdc2fb;
+}
+
+.title-word-2 {
+  --color-1: #bdc2fb;
+  --color-2: #f8a9da;
+  --color-3: #d8a7fe;
+}
+
+.title-word-3 {
+  --color-1: #d8a7fe;
+  --color-2: #bdc2fb;
+  --color-3: #f8a9da;
+}
+
+.title-word-4 {
+  --color-1: #bdc2fb;
+  --color-2: #f8a9da;
+  --color-3: #d8a7fe;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+.start{
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  width:200px;
+  height: 100px;
+  margin-left: 450px;
+  margin-top: -55px;
+}
+
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 17vh
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 4vw;
+  text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  .box {
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+  }
+
+  .inner-box {
+    position: static;
+    transform: none;
+    width: revert;
+    height: revert;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 530px) {
+  main {
+    padding: 1rem;
+  }
+
+  .box {
+    border-radius: 2rem;
+  }
+
+  .inner-box {
+    padding: 1rem;
+  }
+}
+    </style>
+   </head>
+   <body>
+      <main>
+         <div class="box">
+         <div class="inner-box">
+          <div class="head">
+          <div class="logo">
+            <h2>Plasma Donor</h2>
+            <div class="header">
+              <a href="#guide">Donation Guide</a>
+              <a href="#center">Healthcare Centers</a>
+              <a href="#blog">Plasma Blog</a>
+            </div>
+            </div>
+            <div class="container">
+              <h2 class="title">
+                <span class="title-word title-word-1">WELCOME</span>
+                <span class="title-word title-word-2">TO</span>
+                <span class="title-word title-word-3">PLASMA</span>
+                <span class="title-word title-word-4">DONOR</span>
+              </h2>
+            </div>
+            <div class="maintext">
+              <h2>A Pathway To Bridge the Gap Between Plasma Donors And Receivers</h2>
+            </div>
+            <div class="images">
+              <img src="https://plasmadonor-images.s3.jp-osa.cloud-object-storage.appdomain.cloud/landing%20img.png" alt="donationillustration" class="imgsize" >
+             </div>
+            <div class="start">
+             <a href="/index"> <input type="submit" value="GET STARED!" class="btn"></a>
+            </div>
+            </div>
+          </div>
+         </div>
+     </div>
+     </main>
+</body>
+</html>
