@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Donor Information</title>
+    <style>
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+     
+     *,
+     *::before,
+     *::after {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+     }
+     footer{
+      align-content: center;
+      font-size: small;
+      font-weight: 300;
+      margin-left: 330px; 
+    }
+     
+     .header {
+  float: left;
+  color: #75519f;
+  text-align: center;
+  padding: 12px;
+  margin-left:570px;
+  font-size: large; 
+  font-weight: 700rem;
+}
+
+     body,
+     input {
+       font-family: "Poppins", sans-serif;
+     }
+     
+     main {
+       width: 100%;
+       min-height: 100vh;
+       overflow: hidden;
+       background-color: #e9cffa;
+       padding: 2rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+     }
+     
+     .box {
+       position: relative;
+       width: 100%;
+       max-width: 1070px;
+       height: 1670px;
+       background-color: #fff;
+       padding: 35px;
+       border-radius: 3.3rem;
+       box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+     }
+     
+     .logo {
+       display: flex;
+       align-items: center;
+       font-size:x-large;
+       margin-bottom: 10px;
+       color: #f792c1;
+     }
+     
+     .title{
+       display: flex;
+       align-items: center;
+       font-size:large;
+       margin-bottom: 15px;
+       color:rgb(28, 27, 27);
+     }
+     
+     label{
+       color: #30263a;
+     }
+
+     table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  text-align: left;
+  padding: 13px;
+}
+
+tr:nth-child(even) {
+  background-color: #cab5cf76;
+}
+     </style>
+  </head>
+
+<body>
+<main>
+  <form action="/action_page.php" >
+    <div class="box">
+      <div class="logo">
+        <h2>Plasma Donor</h2>
+        <div class="header"><a href="/redirland">Back To Home</a> </div>
+      </div>
+      <div class="title">
+        <h2>Donor Information</h2> 
+      </div>
+      <table>
+        
+        <tr>
+          <th>DONOR NAME</th>
+          <th>PHONE NUMBER</th>
+          <th>BLOOD GROUP</th>
+          <th>EMAIL-ID</th>
+        </tr>
+        <tr>
+          {%for i in range(0, len)%} 
+          <td><b>{{username[i]}}</b></td>
+          <td>{{phnnumber[i]}}</td>
+          <td><b>{{bloodgroup[i]}}</b></td>
+          <td>{{email[i]}}</td>
+        </tr>      
+        {%endfor%}
+      </table>
+      </div>
+   </form>
+</main>
+<footer>Plasma Donor Application by TEAM ID :713319CS067</footer>
+
+            
+              
+
+
+</body>
+</html>
