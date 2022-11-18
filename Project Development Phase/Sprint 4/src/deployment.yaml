@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: plasmadonor
+spec:
+  selector:
+    app: plasmadonor
+  ports:
+    - port: 5000
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plasmadonor
+  labels:
+    apps: plasmadonor
+spec:
+  selector:
+    matchLabels:
+      app: plasmadonor
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: plasmadonor
+    spec:
+      containers:
+        - name: plasmadonor
+          #image: icr.io/plasmadonor/app:latest
+          image: au.icr.io/plasmadonor/app:latest
+          ports:
+            - containerPort: 5000
